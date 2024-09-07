@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fun with Cards</title>
+    <title>Create Flashcards - Fun with Cards</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -11,8 +11,8 @@
         <div class="logo">Fun with Cards</div>
         <nav class="nav-menu">
             <ul id="menu-list" class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="/pages/flashcards.html">Create Cards</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="flashcards.html">Create Cards</a></li>
                 <li><a href="#">My Decks</a></li>
                 <li><a href="#">Login</a></li>
             </ul>
@@ -27,17 +27,24 @@
         </div>
     </header>
 
-    <section class="hero">
-        <h1>Make Learning Fun with Custom Flashcards!</h1>
-        <p>Create flashcards and master new topics in an interactive and fun way.</p>
-        <div class="cta-buttons">
-            <a href="/pages/flashcards.html" class="btn primary">Create Cards</a>
-            <a href="#" class="btn secondary">Log In</a>
+    <section class="flashcard-creation">
+        <h1>Create Your Flashcard</h1>
+        <form id="flashcard-form">
+            <label for="question">Question:</label>
+            <textarea id="question" rows="4"></textarea>
+            <label for="answer">Answer:</label>
+            <textarea id="answer" rows="4"></textarea>
+            <button type="button" onclick="addFlashcard()">Add Flashcard</button>
+        </form>
+
+        <div class="preview">
+            <h2>Your Flashcards</h2>
+            <div id="flashcard-preview-container" class="flashcard-container"></div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Fun with Cards | Inspired by Sheldon Cooper's Fun with Flags</p>
+        <p>&copy; 2024 Fun with Cards</p>
     </footer>
 
     <script src="../js/app.js"></script>
